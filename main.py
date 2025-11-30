@@ -16,7 +16,7 @@ import re
 try:
     st.set_page_config(
         page_title="Munzur AI Güvenlik",
-        page_icon="🛡️", # Hata riskine karşı emoji kullanıyoruz
+        page_icon="🛡️", 
         layout="wide",
         initial_sidebar_state="expanded"
     )
@@ -319,6 +319,12 @@ else:
         if st.button("🕵️ Manuel Analiz", use_container_width=True, type="primary" if st.session_state.active_page == 'Manuel' else "secondary"):
             st.session_state.active_page = 'Manuel'
             safe_rerun()
+        
+        # --- YENİ EKLENEN BUTON: Modül Eğit ---
+        if st.button("🧠 Modül Eğit", use_container_width=True, type="primary" if st.session_state.active_page == 'Modül Eğit' else "secondary"):
+            st.session_state.active_page = 'Modül Eğit'
+            safe_rerun()
+
         if st.button("📧 Gmail Bağla", use_container_width=True, type="primary" if st.session_state.active_page == 'Gmail' else "secondary"):
             st.session_state.active_page = 'Gmail'
             safe_rerun()
@@ -352,7 +358,7 @@ else:
                 st.session_state.active_page = 'Veri Seti Bilgisi'
                 safe_rerun()
 
-    # --- YENİ EKLENEN SAYFA: VERİ SETİ BİLGİSİ ---
+    # --- VERİ SETİ BİLGİSİ ---
     elif st.session_state.active_page == 'Veri Seti Bilgisi':
         st.title("📊 Veri Seti Analizi ve İstatistikler")
         st.write("Munzur AI modelinin arkasındaki veri gücünü burada inceleyebilirsiniz.")
@@ -485,11 +491,19 @@ else:
                         del st.session_state.analiz_yapildi_man
                         safe_rerun()
 
+    # --- YENİ EKLENEN SAYFA: Modül Eğit ---
+    elif st.session_state.active_page == 'Modül Eğit':
+        st.title("🧠 Modül Eğit")
+        st.warning("🚧 Bu sayfa henüz yapım aşamasında.")
+        st.info("İlerleyen aşamalarda buradan sisteme manuel veri girerek yapay zekayı eğitebileceksiniz.")
+
     elif st.session_state.active_page == 'Gmail':
         st.title("📧 Gmail Bağla")
         st.info("🚧 Bu modül geliştirme aşamasındadır.")
         st.write("Yakında eklenecek özellikler: OAuth Girişi, Otomatik Tarama.")
+        st.progress(65)
 
         st.progress(65)
+
 
 
