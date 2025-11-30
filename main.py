@@ -15,7 +15,7 @@ import re
 # ---------------------------------------------------------
 try:
     st.set_page_config(
-        page_title="Munzur AI Güvenlik",
+        page_title="Munzzzur AI Güvenlik",
         page_icon="🛡️", 
         layout="wide",
         initial_sidebar_state="expanded"
@@ -334,6 +334,13 @@ else:
 
     # --- SAYFA İÇERİKLERİ ---
     if st.session_state.active_page == 'Ana Sayfa':
+        st.write("""
+Munzur AI Güvenlik Kalkanı, e-posta içeriklerini analiz ederek **oltalama (phishing) saldırılarını tespit eden** 
+yapay zekâ destekli bir güvenlik uygulamasıdır. 
+Sistem, gerçek zamanlı analiz yapar; güvenli veya şüpheli mailleri ayırt eder ve 
+yanlış sınıflandırmaları anında düzelterek kendi kendini geliştirir.
+""")
+
         st.title("🛡️ Munzur AI Güvenlik Kalkanı")
         st.success(f"Hoş geldin {st.session_state.username}! Güvenlik taramasına başlamak için sol menüyü kullanabilirsin.")
         
@@ -502,8 +509,3 @@ else:
         st.info("🚧 Bu modül geliştirme aşamasındadır.")
         st.write("Yakında eklenecek özellikler: OAuth Girişi, Otomatik Tarama.")
         st.progress(65)
-
-        st.progress(65)
-
-
-
