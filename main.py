@@ -15,7 +15,7 @@ import re
 # ---------------------------------------------------------
 try:
     st.set_page_config(
-        page_title="Munzur AI Güvenlik",
+        page_title="Munzur AI Güvenliiiiiiiik",
         page_icon="🛡️", # Hata riskine karşı emoji kullanıyoruz
         layout="wide",
         initial_sidebar_state="expanded"
@@ -489,4 +489,5 @@ else:
         st.title("📧 Gmail Bağla")
         st.info("🚧 Bu modül geliştirme aşamasındadır.")
         st.write("Yakında eklenecek özellikler: OAuth Girişi, Otomatik Tarama.")
+
         st.progress(65)
