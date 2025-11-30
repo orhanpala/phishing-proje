@@ -15,7 +15,7 @@ import re
 # ---------------------------------------------------------
 try:
     st.set_page_config(
-        page_title="Munzur AI Güvenliiiiiiiik",
+        page_title="Muzzznzur AI Güvenliiiiiiiik",
         page_icon="🛡️", # Hata riskine karşı emoji kullanıyoruz
         layout="wide",
         initial_sidebar_state="expanded"
@@ -491,3 +491,4 @@ else:
         st.write("Yakında eklenecek özellikler: OAuth Girişi, Otomatik Tarama.")
 
         st.progress(65)
+
